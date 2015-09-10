@@ -1,0 +1,14 @@
+﻿<Window x:Class="CMF.TestHistoryAnalysisTool.TestHistory.BuildDefinitionsToSearch.BuildDefinitionsToSearchView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Build Definitions to Search" Height="300" Width="300" WindowStyle="ToolWindow" ResizeMode="NoResize" ShowInTaskbar="False" Icon="/TestHistoryAnalysisTool;component/Resources/Search.ico">
+    <Grid>
+        <ListBox ItemsSource="{Binding}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox IsChecked="{Binding IsSelected}" Content="{Binding Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

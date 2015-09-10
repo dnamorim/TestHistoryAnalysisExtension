@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="981acc0c-c3c9-40ff-b852-179be8f03fc5" Version="1.0" Language="en-US" Publisher="Critical Manufacturing" />
+    <DisplayName>Test History Analysis Extension</DisplayName>
+    <Description>Test History Analysis Tool is a Visual Studio Extension designed to assist on getting the bigger picture of test track-record of TFS Projects, improving the test analysis and helping to pin point code areas with defects.</Description>
+    <Icon>Resources\TestHistoryNavigationItem.png</Icon>
+    <Tags>Unit Testing, Team Foundation</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[12.0]" Id="Microsoft.VisualStudio.Pro" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF" DisplayName="Visual Studio MPF" d:Source="Installed" Version="[11.0,13.0)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup;BuiltProjectOutputGroup;BuiltProjectOutputGroupDependencies;GetCopyToOutputDirectoryItems;SatelliteDllsProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+  </Assets>
+</PackageManifest>
